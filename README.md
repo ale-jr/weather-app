@@ -1,6 +1,21 @@
 # Weather App
 Just a simple project that allows you to check the weather :D
 
+## Folder contents
+
+#### /public
+Where our html, assets and environment variables are
+### /src
+All those React things
+* __/components:__ React components divided by folder, with index.tsx as the component entrypoint, some comoponents have a style.tsx file, for Material-ui styling and a types.tsx for Typescript definitions
+* __/context:__ React contexts divided by folder, follows the same rules of components
+* __/hooks:__ Lovely hooks for the aplication, divided by folder too
+* __/theme:__ Some Material-ui theme definitions
+* __App.tsx:__ Where the magic happens, here we have some context providers and entrypoints for our components
+* __index.css:__ Just some definitions for html, body and root div, should not be used for styling
+* __index.tsx:__ Entrypoint for our application
+* __react-app-env.d.ts:__ Typescript definitions
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
