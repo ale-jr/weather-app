@@ -16,9 +16,22 @@ All those React things
 * __index.tsx:__ Entrypoint for our application
 * __react-app-env.d.ts:__ Typescript definitions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Development 
+To run this project in development mode, just run `yarn install` to install all dependencies and then run `yarn start` to start the devlopment server
 
-## Available Scripts
+## Deployment
+### With docker
+* Build the docker image with the build script located at Docker folder `/Docker/build.sh` or simply run `docker build -t weather-app .`
+* Put your environment variables at `/public/env.js` following the sample file in `/public/env.sample.js`
+* Run the docker image with the run script `/Docker/run.sh` or just run `docker container run -d -it -p 80:80 -v $PWD/public/env.js:/usr/share/nginx/html/env.js --name=wa weather-app`, don't forget to map your env.js file to the docker container :D
+This Docker image already comes with nginx configured, so no worries for serving React content 
+
+### With node
+* Put your environment variables at `/public/env.js` following the sample file in `/public/env.sample.js`
+* Run `yarn build` to generate the build folder
+* Serve build folder with a http server or just run `serve -s build` for light purposes 
+
+## Available npm Scripts
 
 In the project directory, you can run:
 
