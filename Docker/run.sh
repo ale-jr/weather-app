@@ -1,0 +1,1 @@
+cd .. && docker container run -d -it -p 80:80 -v $PWD/public/env.js:/usr/share/nginx/html/env.js --name=wa weather-app
