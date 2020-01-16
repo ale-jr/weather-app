@@ -15,7 +15,7 @@ import useApi from '../../hooks/apiHook'
 import GpsButton from '../GpsLocationButton'
 import resumeAxiosError from './errorHandler'
 import weatherAdapter from './weatherAdapter'
-import { ThemeContext } from '../../contexts/BackgroundContext'
+import { BackgroundContext } from '../../contexts/BackgroundContext'
 import { IProps } from './types'
 
 //Definições gerais para requisitar dados no OpenWeatherMap
@@ -28,7 +28,7 @@ const apiDefaultParameters = {
 const SelectLocation: React.FC<IProps> = ({ onWeatherSet }) => {
     const classes = useStyles()
     const [request, setRequest] = useApi(resumeAxiosError)
-    const { setRandom } = React.useContext(ThemeContext)
+    const { setRandom } = React.useContext(BackgroundContext)
 
     React.useEffect(() => {
         if (request.data) {
